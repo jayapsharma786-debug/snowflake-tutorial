@@ -1,3 +1,3 @@
 CREATE OR REPLACE STAGE CUSTOMER_STAGE
-URL='s3://snowflakedemojaya/customers (1).csv'
+URL='s3://snowflakedemojaya/'
 STORAGE_INTEGRATION = AWS_INT;
