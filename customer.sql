@@ -5,7 +5,11 @@ INSERT INTO customer
 VALUES
 (1, 'Jaya Sharma');
 
-CREATE OR REPLACE PROCEDURE SP_INSERT_CUSTOMER()
+CREATE OR REPLACE PROCEDURE SP_ADD_CUSTOMER
+(
+    P_ID NUMBER,
+    P_NAME STRING
+)
 RETURNS STRING
 LANGUAGE SQL
 AS
@@ -13,11 +17,10 @@ $$
 BEGIN
 
     INSERT INTO CUSTOMER
-    VALUES (1, 'Jaya');
+    VALUES (:P_ID, :P_NAME);
 
-    RETURN 'Customer Inserted Successfully';
+    RETURN 'Customer Added';
 
 END;
 $$;
-
 
