@@ -5,4 +5,19 @@ INSERT INTO customer
 VALUES
 (1, 'Jaya Sharma');
 
+CREATE OR REPLACE PROCEDURE SP_INSERT_CUSTOMER()
+RETURNS STRING
+LANGUAGE SQL
+AS
+$$
+BEGIN
+
+    INSERT INTO CUSTOMER
+    VALUES (1, 'Jaya');
+
+    RETURN 'Customer Inserted Successfully';
+
+END;
+$$;
+
 
